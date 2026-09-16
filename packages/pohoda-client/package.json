@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@vencav/result": "^0.1.1",
-    "fast-xml-parser": "^5.4.1"
+    "fast-xml-parser": "^5.11.1"
   },
   "peerDependencies": {
     "axios": ">=1.0.0 <2.0.0"
