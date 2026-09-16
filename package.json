@@ -13,10 +13,10 @@
     "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.0",
-    "@types/node": "^22.0.0",
-    "eslint": "^9.27.0",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.32.1"
+    "@changesets/cli": "^3.0.2",
+    "@types/node": "^26.5.1",
+    "eslint": "^10.10.0",
+    "typescript": "^7.0.2",
+    "typescript-eslint": "^8.70.0"
   }
 }
