@@ -32,7 +32,7 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm test:dist
-      - uses: changesets/action@v1
+      - uses: changesets/action@v2
         with:
           publish: pnpm release
           title: "chore: release packages"
