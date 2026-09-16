@@ -1,0 +1,70 @@
+{
+  "name": "@vencav/pohoda-client",
+  "version": "0.1.1",
+  "description": "TypeScript client for the Pohoda mServer XML API. Covers XML submission, response parsing, and stock export helpers.",
+  "keywords": [
+    "pohoda",
+    "mserver",
+    "xml",
+    "api",
+    "client",
+    "typescript"
+  ],
+  "author": "Václav Vracovský <vaclavvracovsky@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/VencaV/shoptet-client/tree/master/packages/pohoda-client#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VencaV/shoptet-client.git",
+    "directory": "packages/pohoda-client"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:dist": "pnpm build && node ./smoke-dist.mjs",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vencav/result": "^0.1.1",
+    "fast-xml-parser": "^5.4.1"
+  },
+  "peerDependencies": {
+    "axios": ">=1.0.0 <2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "3.2.4",
+    "axios": "^1.13.4",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.0"
+  }
+}
